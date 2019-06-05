@@ -15,12 +15,19 @@
     <tr *ngFor="let user of users">
       <td>{{ user.id }}</td>
       <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email | lowercase }}</td>
       <td>{{ user.address.street }}<br>
-
-
-
-
+          {{ user.address.suite }}<br>
+          {{ user.address.zipcode }}<br>
+          {{ user.address.city }}<br>
+          {{ user.address.geo.lat }} e {{ user.address.geo.lng }} <br>
       </td>
+      <td>{{ user.phone}}</td>
+      <td><a href="http://{{ user.website}}">{{user.website}}</a></td>
+      <td>{{ user.company.name}}</td>
+
+
     </tr>
   </tbody>
 </table>

@@ -1,8 +1,10 @@
-import { PostModule } from './post/post.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+
+import { UserModule } from './user/user.module';
+import { PostModule } from './post/post.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    PostModule
+    PostModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
